@@ -69,8 +69,13 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background: var(--bg-color);
+    color: var(--white);
     font-family: var(--font-regular);
     transition: 0.3s ease;
 }
@@ -88,50 +93,46 @@ ul li {
     list-style-type: none;
 }
 
-.flex-center
-{
+.flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.flex-between
-{
+.flex-between {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.color-darkblue
-{
+.color-darkblue {
     color: var(--secondary-color);
 }
 
 
 /* ===================== Header ====================== */
-.header
-{
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 24px 0;
-    z-index: 999;
+    padding: 16px 0;
+    z-index: 100;
+    background-color: var(--bg-color);
 }
 
-.header__content .logo
-{
+.header__content .logo {
     gap: 12px;
     cursor: pointer;
 }
-.header__content .logo img
-{
+
+.header__content .logo img {
     width: 60px;
     height: 60px;
+    z-index: 1111;
 }
 
-.header__content .logo h3
-{
+.header__content .logo h3 {
     font-family: var(--font-bold);
     color: var(--primary-color);
     text-transform: uppercase;
@@ -139,16 +140,14 @@ ul li {
     margin: 0;
 }
 
-.header__items
-{
+.header__items {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 48px;
 }
 
-.nav__items
-{
+.nav__items {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,21 +157,18 @@ ul li {
     color: var(--grey-light);
 }
 
-.nav__items li a 
-{
+.nav__items li a {
     color: var(--grey-light);
     transition: all 0.3s ease;
     letter-spacing: 1.6px;
     padding: 12px;
 }
 
-.nav__items li a:hover
-{
+.nav__items li a:hover {
     color: var(--primary-color);
 }
 
-.btn 
-{
+.btn {
     outline: none !important;
     border: 1px solid var(--primary-color);
     padding: 10px 28px;
@@ -182,16 +178,209 @@ ul li {
     transition: all 0.4s ease;
 }
 
-.btn:hover
-{
+.btn:hover {
     color: var(--primary-color);
     background-color: rgba(153, 153, 153, 0.041);
-    
+
 }
 
-/* ===================== Header ====================== */
-/* ===================== Header ====================== */
-/* ===================== Header ====================== */
+/* ===================== Hero ====================== */
+
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.home__bg__right {
+    position: absolute;
+    right: 0;
+    top: 6rem;
+    z-index: -1;
+}
+
+.home__bg__right img,
+.left__side__bg img {
+    width: 100%;
+}
+
+.home__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home__text {
+    width: 50%;
+}
+
+.home__text h1 {
+    font-size: var(--fs-1);
+    font-family: var(--font-bold);
+    letter-spacing: 1.9px;
+    word-spacing: 8px;
+}
+
+.home__text p {
+    padding-top: 1.1rem;
+    font-family: var(--font-medium);
+    color: var(--grey-light);
+    width: 70%;
+}
+
+
+.home__images {
+    position: relative;
+    width: 40%;
+}
+
+.up_img,
+.down_img {
+    position: absolute;
+}
+
+.up_img {
+    top: -15rem;
+    left: 6rem;
+}
+
+.up_img img {
+    height: 167px;
+    width: 174px;
+}
+
+.down_img {
+    right: 0;
+}
+
+.down_img img {
+    height: 320px;
+    width: 324px;
+}
+
+
+
+.buttons {
+    margin-top: 3.3rem;
+    display: flex;
+    align-items: self-start;
+    justify-content: start;
+    gap: 1.3rem;
+}
+
+.green__btn {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    font-family: var(--font-medium);
+    padding: 12px 24px;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    border: none;
+    outline: none;
+}
+
+.more__btn {
+    background-color: transparent;
+    font-family: var(--font-medium);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    border: 1px solid var(--primary-color);
+    outline: none;
+}
+
+.left__side__bg {
+    position: absolute;
+    top: 22rem;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+
+/* ===================== Logo ====================== */
+
+.brand__logo {
+    background-color: var(--primary-color);
+    width: 93%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ===================== About Us ====================== */
+.about {
+    width: 100%;
+    position: relative;
+}
+
+.about__bg__left {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+}
+
+.about__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12rem;
+}
+
+.left__content {
+    width: 60%;
+}
+
+.right__content {
+    width: 40%;
+}
+
+.title {
+    color: var(--primary-color);
+    font-family: var(--font-semibold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: var(--fs-4);
+}
+
+.subtitle {
+    padding-top: 1rem;
+    width: 90%;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    font-size: var(--fs-2);
+    font-family: var(--font-semibold);
+}
+
+.text {
+    font-size: var(--fs-4);
+    font-family: var(--font-light);
+    opacity: 0.7;
+    width: 90%;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+
+
 /* ===================== Header ====================== */
 /* ===================== Header ====================== */
 /* ===================== Header ====================== */
